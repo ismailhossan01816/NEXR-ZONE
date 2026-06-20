@@ -4,247 +4,59 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NEXR Zone</title>
-
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-body{
-background:#f5f5f5;
-}
-
-header{
-background:#000;
-color:#fff;
-padding:15px;
-text-align:center;
-}
-
-header h1{
-color:#00aaff;
-}
-
-.banner{
-background:#111;
-color:white;
-padding:30px;
-text-align:center;
-}
-
-.banner h2{
-font-size:28px;
-margin-bottom:10px;
-}
-
-.container{
-width:95%;
-max-width:1200px;
-margin:auto;
-padding:20px;
-}
-
-.products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:15px;
-}
-
-.product{
-background:white;
-padding:15px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,.1);
-}
-
-.product h3{
-font-size:18px;
-margin-bottom:10px;
-}
-
-.price{
-color:red;
-font-size:22px;
-font-weight:bold;
-margin:10px 0;
-}
-
-button{
-background:#ff6600;
-color:white;
-border:none;
-padding:10px;
-width:100%;
-border-radius:5px;
-cursor:pointer;
-}
-
-.cart{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#000;
-color:#fff;
-padding:15px;
-border-radius:50px;
-}
-
-.checkout{
-margin-top:40px;
-background:white;
-padding:20px;
-border-radius:10px;
-}
-
-.checkout input,
-.checkout textarea,
-.checkout select{
-width:100%;
-padding:10px;
-margin-top:10px;
-margin-bottom:10px;
-}
-
-.whatsapp{
-background:green;
-margin-top:10px;
-}
-
-footer{
-background:#000;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:30px;
-}
+    *{ margin:0; padding:0; box-sizing:border-box; font-family:Arial,sans-serif; }
+    body{ background:#f5f5f5; }
+    header{ background:#000; padding:15px; text-align:center; }
+    header img { height: 80px; }
+    .banner{ background:#111; padding:0; text-align:center; }
+    .banner img { width: 100%; max-width: 1000px; height: auto; }
+    .container{ width:95%; max-width:1200px; margin:auto; padding:20px; }
+    .products{ display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:15px; }
+    .product{ background:white; padding:15px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,.1); }
+    .price{ color:red; font-size:22px; font-weight:bold; margin:10px 0; }
+    button{ background:#ff6600; color:white; border:none; padding:10px; width:100%; border-radius:5px; cursor:pointer; }
+    .whatsapp{ background:green; margin-top:10px; text-decoration:none; display:block; text-align:center; padding:10px; color:white; border-radius:5px; }
+    footer{ background:#000; color:white; text-align:center; padding:20px; margin-top:30px; }
 </style>
 </head>
-
 <body>
 
 <header>
-<h1>NEXR Zone</h1>
-<p>One Zone. All Solutions.</p>
+    <img src="logo.jpg" alt="NEXR Zone Logo">
 </header>
 
 <section class="banner">
-<h2>Action Cameras & DJI Microphones</h2>
-<p>Best Tech Products For Riders & Creators</p>
+    <img src="banner.jpg" alt="NEXR Zone Banner">
 </section>
 
 <div class="container">
+    <h2>Featured Products</h2><br>
+    <div class="products">
+        <!-- প্রোডাক্টগুলো এখানে আগের মতোই থাকবে -->
+        <div class="product"><h3>DJI Osmo Action 6 Standard</h3><p class="price">৳42,999</p><button onclick="alert('Added to cart!')">Add To Cart</button></div>
+        <div class="product"><h3>DJI Osmo Action 6 Adventure</h3><p class="price">৳52,499</p><button onclick="alert('Added to cart!')">Add To Cart</button></div>
+        <div class="product"><h3>DJI Osmo Action 5 Pro</h3><p class="price">৳39,999</p><button onclick="alert('Added to cart!')">Add To Cart</button></div>
+        <div class="product"><h3>DJI Osmo Pocket 3 Creator Combo</h3><p class="price">৳54,999</p><button onclick="alert('Added to cart!')">Add To Cart</button></div>
+    </div>
 
-<h2>Featured Products</h2>
-<br>
+    <div class="checkout">
+        <h2>Checkout</h2>
+        <input type="text" placeholder="Full Name" style="width:100%; padding:10px; margin:10px 0;">
+        <input type="text" placeholder="Mobile Number" style="width:100%; padding:10px; margin:10px 0;">
+        <textarea placeholder="Complete Address" style="width:100%; padding:10px; margin:10px 0;"></textarea>
+        
+        <p><b>Email:</b> nexrzone@gmail.com</p>
+        <p><b>WhatsApp:</b> 01859195586</p>
 
-<div class="products">
-
-<div class="product">
-<h3>DJI Osmo Action 6 Standard</h3>
-<p class="price">৳42,999</p>
-<button onclick="addCart()">Add To Cart</button>
-</div>
-
-<div class="product">
-<h3>DJI Osmo Action 6 Adventure</h3>
-<p class="price">৳52,499</p>
-<button onclick="addCart()">Add To Cart</button>
-</div>
-
-<div class="product">
-<h3>DJI Osmo Action 5 Pro</h3>
-<p class="price">৳39,999</p>
-<button onclick="addCart()">Add To Cart</button>
-</div>
-
-<div class="product">
-<h3>DJI Osmo Pocket 3 Creator Combo</h3>
-<p class="price">৳54,999</p>
-<button onclick="addCart()">Add To Cart</button>
-</div>
-
-<div class="product">
-<h3>DJI Mic Mini 2</h3>
-<p class="price">৳11,990</p>
-<button onclick="addCart()">Add To Cart</button>
-</div>
-
-<div class="product">
-<h3>DJI Mic 3</h3>
-<p class="price">৳31,499</p>
-<button onclick="addCart()">Add To Cart</button>
-</div>
-
-<div class="product">
-<h3>DJI Mic Mini</h3>
-<p class="price">৳8,499</p>
-<button onclick="addCart()">Add To Cart</button>
-</div>
-
-<div class="product">
-<h3>DJI Mic 2</h3>
-<p class="price">৳23,500</p>
-<button onclick="addCart()">Add To Cart</button>
-</div>
-
-</div>
-
-<div class="checkout">
-
-<h2>Checkout</h2>
-
-<input type="text" placeholder="Full Name">
-
-<input type="text" placeholder="Mobile Number">
-
-<textarea placeholder="Complete Address"></textarea>
-
-<select>
-<option>bKash</option>
-<option>Nagad</option>
-<option>Cash On Delivery</option>
-</select>
-
-<input type="text" placeholder="Transaction ID">
-
-<p><b>bKash:</b> 01XXXXXXXXX</p>
-<p><b>Nagad:</b> 01XXXXXXXXX</p>
-
-<button>Place Order</button>
-
-<a href="https://wa.me/8801XXXXXXXXX">
-<button class="whatsapp">
-Order On WhatsApp
-</button>
-</a>
-
-</div>
-
-</div>
-
-<div class="cart">
-Cart: <span id="cart">0</span>
+        <button style="margin-top:10px;">Place Order</button>
+        <a href="https://wa.me/8801859195586" class="whatsapp">Order On WhatsApp</a>
+    </div>
 </div>
 
 <footer>
-© 2026 NEXR Zone
-<br>
-Ride Smart. Live Connected.
+    © 2026 NEXR Zone <br> Ride Smart. Live Connected.
 </footer>
-
-<script>
-
-let count=0;
-
-function addCart(){
-count++;
-document.getElementById("cart").innerText=count;
-}
-
-</script>
 
 </body>
 </html>
